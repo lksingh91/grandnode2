@@ -7,14 +7,15 @@
     <Company>UNIT-SOFT Sp. z o.o.</Company>
     <PackageProjectUrl>https://grandnode.com/</PackageProjectUrl>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Authentication.Google</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Authentication.Google\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Authentication.Google</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Authentication.Google\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 

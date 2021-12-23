@@ -12,6 +12,14 @@
     <UserSecretsId>a2091e37-94a0-4446-8a5d-1d5c0835333a</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'dev' " />
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Grand.Domain\Grand.Domain.csproj" />
     <ProjectReference Include="..\..\Core\Grand.Infrastructure\Grand.Infrastructure.csproj" />
@@ -42,6 +50,22 @@
     <Content Include="Roslyn\**" CopyToPublishDirectory="PreserveNewest" Exclude="Roslyn\**\*.dll" />
     <Content Include="logs\**" CopyToPublishDirectory="PreserveNewest" />
     <Content Remove="wwwroot\assets\images\thumbs\*.jpeg;wwwroot\assets\images\thumbs\*.jpg;wwwroot\assets\images\thumbs\*.png" />
+    <Content Remove="App_Data\DevApp\appdevsettings.json" />
+    <Content Remove="App_Data\DevApp\appsettings.json" />
+    <Content Remove="App_Data\DevApp\DataProtectionKeys\Index.htm" />
+    <Content Remove="App_Data\DevApp\DataProtectionKeys\key-956806dd-2e6f-4e6f-9f34-9551e3c71fe7.xml" />
+    <Content Remove="App_Data\DevApp\Settings.cfg" />
+    <Content Remove="App_Data\DevApp\UrlRewrite.xml" />
+    <Content Remove="App_Data\DevApp\InstalledPlugins.cfg" />
+    <Content Remove="App_Data\DevApp\GeoLite2-Country.mmdb" />
+    <Content Remove="App_Data\DevApp\TempUploads\Index.htm" />
+    <Content Remove="App_Data\DevApp\Resources\DefaultLanguage.xml" />
+    <Content Remove="App_Data\DevApp\Resources\Installation\installation.en.xml" />
+    <Content Remove="App_Data\DevApp\Resources\Installation\installation.pl.xml" />
+    <Content Remove="App_Data\DevApp\Resources\supportedcollation.xml" />
+    <Content Remove="App_Data\DevApp\Resources\Upgrade\en_110.xml" />
+    <Content Remove="App_Data\DevApp\Download\Index.htm" />
+    <Content Remove="App_Data\DevApp\DataProtectionKeys\key-95444f1c-4446-4e1a-a1ed-5d2129a5473b.xml" />
   </ItemGroup>
   <Target Name="PublishViews" BeforeTargets="PrepareForPublish">
     <ItemGroup>
@@ -51,9 +75,7 @@
     <Copy SourceFiles="@(ThemeViews)" DestinationFolder="$(PublishDir)/Themes/%(RecursiveDir)" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(PublishDir)/Plugins/%(RecursiveDir)" SkipUnchangedFiles="true" />
   </Target>
-  <!--<PropertyGroup>
-    <EnableDefaultContentItems>false</EnableDefaultContentItems>
-  </PropertyGroup>-->
+ 
   <ItemGroup>
     <Content Remove="Plugins\**" />
     <Compile Remove="Plugins\**" />
@@ -74,4 +96,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
 </Project>

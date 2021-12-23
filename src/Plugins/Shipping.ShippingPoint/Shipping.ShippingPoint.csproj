@@ -11,12 +11,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ShippingPoint\</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ShippingPoint\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ShippingPoint</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ShippingPoint\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 

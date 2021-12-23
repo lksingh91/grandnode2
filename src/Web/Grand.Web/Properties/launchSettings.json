@@ -8,6 +8,17 @@
     }
   },
   "profiles": {
+    "dev": {
+      "commandName": "Project",
+      "commandLineArgs": "Directory=DevApp Status=3 appsettings=2.0",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:16594",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Version_Name": "Web",
+        "Version_Number": "2.0"
+      }
+    },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
@@ -15,20 +26,19 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Grand.Web": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:16593"
-    },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true,
-      "useSSL": true
+      "environmentVariables": {}
+    },
+    "Grand.Web": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:16593",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

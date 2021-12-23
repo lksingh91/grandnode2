@@ -6,15 +6,16 @@
     <Authors>UNIT-SOFT Sp. z o.o.</Authors>
     <PackageProjectUrl>https://grandnode.com/</PackageProjectUrl>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.FacebookPixel</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.FacebookPixel\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.FacebookPixel</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.FacebookPixel\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 

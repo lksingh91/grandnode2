@@ -11,12 +11,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ByWeight\</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ByWeight\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ByWeight\</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Shipping.ByWeight\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 

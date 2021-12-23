@@ -8,15 +8,16 @@
     <PackageProjectUrl>https://grandnode.com/</PackageProjectUrl>
     <TieredCompilation>true</TieredCompilation>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.GoogleAnalytics</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.GoogleAnalytics\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.GoogleAnalytics</OutputPath>
+    <OutputPath>..\..\Web\Grand.Web\Plugins\Widgets.GoogleAnalytics\net5.0</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
